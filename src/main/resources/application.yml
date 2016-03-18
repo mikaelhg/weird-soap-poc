@@ -8,8 +8,13 @@ spring:
 spring.jpa.hibernate.ddl-auto: update
 
 server:
-  port: 16480
-  address: 127.0.0.1
+  port: 16443
+  address: 0.0.0.0
+  ssl:
+    enabled: true
+    key-store: "classpath:keystore.jks"
+    key-store-password: storepass
+    key-password: storepass
 
 server.undertow.accesslog.dir: logs
 server.undertow.accesslog.enabled: true
